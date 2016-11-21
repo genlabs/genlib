@@ -1,0 +1,22 @@
+<div class="modal fade" id="login-modal">
+    <div class="modal-dialog">
+		<div class="loginmodal-container">
+			<h1>Welcome</h1><br>
+			<form>
+				<input [(ngModel)]="user.email" type="text" name="user" placeholder="Email">
+				<input [(ngModel)]="user.password" type="password" name="pass" placeholder="Password">
+
+				<input [(ngModel)]="user.rememberMe" type="checkbox" class="" name="remember" id="remember">
+				<label for="remember"> Remember Me</label>
+			</form>
+
+			<button (click)="login()" name="login" class="login loginmodal-submit" value="Login">
+				Log In
+			</button>
+					
+			<div class="login-help">
+				<a href="" class="forgot-password">Forget Password?</a>
+			</div>
+		</div>
+	</div>
+</div>
