@@ -20,7 +20,7 @@ export class GoogleMapComponent implements OnInit{
     @Input() 
     set address(addr:string) {
         this._address = encodeURIComponent(addr);
-
+        this.queryURL = this.santiner.bypassSecurityTrustResourceUrl('https://www.google.com/maps/embed/v1/place?key=' + this._apikey +'&q=' +  this._address);
     }
     get address() {
         return this._address;
