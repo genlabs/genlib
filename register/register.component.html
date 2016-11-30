@@ -1,0 +1,13 @@
+<form id="msform">
+  	<fieldset>
+    	<h2 class="fs-title">Create your account</h2>
+    	<h3 class="fs-subtitle">Genlab</h3>
+    	<input [(ngModel)]="user.email" (ngModelChange)="keyupEmail($event)" type="text" name="email" placeholder="Email" />
+    	<input [(ngModel)]="user.password" type="password" name="pass" placeholder="Password" />
+    	<input [(ngModel)]="password2" (ngModelChange)="confirmPassword($event)" type="password" name="cpass" placeholder="Confirm Password" />
+    	<p *ngIf="errorMsg" class="fs-error"><i class="glyphicon glyphicon-remove
+"></i> {{errorMsg}}</p>
+
+    	<input type="button" name="register" class="next action-button" value="Register" (click)="register()"/>
+  	</fieldset>
+</form>
